@@ -1,0 +1,90 @@
+[15:44:12] [Server thread/INFO]: Starting minecraft server version 1.12.2
+[15:44:12] [Server thread/INFO]: Loading properties
+[15:44:12] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: Неверный дескриптор
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:?]
+	at java.io.FileInputStream.read(FileInputStream.java:287) ~[?:?]
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:345) ~[?:?]
+	at java.io.BufferedInputStream.implRead(BufferedInputStream.java:420) ~[?:?]
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:399) ~[?:?]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:329) ~[?:?]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:372) ~[?:?]
+	at sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:215) ~[?:?]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:169) ~[?:?]
+	at java.io.InputStreamReader.read(InputStreamReader.java:188) ~[?:?]
+	at java.io.BufferedReader.fill(BufferedReader.java:160) ~[?:?]
+	at java.io.BufferedReader.implReadLine(BufferedReader.java:370) ~[?:?]
+	at java.io.BufferedReader.readLine(BufferedReader.java:347) ~[?:?]
+	at java.io.BufferedReader.readLine(BufferedReader.java:436) ~[?:?]
+	at nz$2.run(SourceFile:100) [server.jar:?]
+[15:44:12] [Server thread/INFO]: Default game type: SURVIVAL
+[15:44:12] [Server thread/INFO]: Generating keypair
+[15:44:12] [Server thread/INFO]: Starting Minecraft server on *:25565
+[15:44:12] [Server thread/INFO]: Using default channel type
+[15:44:12] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[15:44:12] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[15:44:12] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[15:44:12] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[15:44:12] [Server thread/INFO]: Preparing level "world"
+[15:44:12] [Server thread/INFO]: [STDERR]: java.util.zip.ZipException: Not in GZIP format
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:176)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at gi.a(SourceFile:25)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at bfm.a(SourceFile:49)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at oo.b(SourceFile:145)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at net.minecraft.server.MinecraftServer.a(SourceFile:281)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at nz.j(SourceFile:233)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at net.minecraft.server.MinecraftServer.run(SourceFile:434)
+[15:44:12] [Server thread/INFO]: [STDERR]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[15:44:12] [Server thread/INFO]: Loaded 488 advancements
+[15:44:13] [Server thread/INFO]: [STDERR]: java.util.zip.ZipException: Not in GZIP format
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:176)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at gi.a(SourceFile:25)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at bfm.a(SourceFile:49)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at ok.b(SourceFile:72)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at net.minecraft.server.MinecraftServer.a(SourceFile:285)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at nz.j(SourceFile:233)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at net.minecraft.server.MinecraftServer.run(SourceFile:434)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[15:44:13] [Server thread/INFO]: [STDERR]: java.util.zip.ZipException: Not in GZIP format
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:176)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at gi.a(SourceFile:25)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at bfm.a(SourceFile:49)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at ok.b(SourceFile:72)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at net.minecraft.server.MinecraftServer.a(SourceFile:285)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at nz.j(SourceFile:233)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at net.minecraft.server.MinecraftServer.run(SourceFile:434)
+[15:44:13] [Server thread/INFO]: [STDERR]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[15:44:13] [Server thread/INFO]: Preparing start region for level 0
+[15:44:14] [Server thread/INFO]: Preparing spawn area: 12%
+[15:44:15] [Server thread/INFO]: Preparing spawn area: 26%
+[15:44:16] [Server thread/INFO]: Preparing spawn area: 42%
+[15:44:17] [Server thread/INFO]: Preparing spawn area: 55%
+[15:44:18] [Server thread/INFO]: Preparing spawn area: 95%
+[15:44:18] [Server thread/INFO]: Done (5,907s)! For help, type "help" or "?"
+[15:45:52] [Server thread/INFO]: KoriBotTest[/[0:0:0:0:0:0:0:1]:49532] logged in with entity id 1525 at (22.5, 63.0, 144.5)
+[15:45:52] [Server thread/INFO]: KoriBotTest joined the game
+[15:45:55] [Server thread/INFO]: KoriLol12[/127.0.0.1:49599] logged in with entity id 1796 at (-182.5, 74.0, 273.5)
+[15:45:55] [Server thread/INFO]: KoriLol12 joined the game
+[15:46:09] [Server thread/INFO]: <KoriLol12> привет
+[15:46:09] [Server thread/INFO]: <KoriBotTest> Привет! вот мои доступные команды:
+[15:46:09] [Server thread/INFO]: <KoriBotTest> 1)'Твое хп'
+[15:46:09] [Server thread/INFO]: <KoriBotTest> 2) Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди'
+[15:46:09] [Server thread/INFO]: <KoriBotTest> 3)игроки максимум
+[15:46:12] [Server thread/INFO]: <KoriLol12> твое хп
+[15:46:12] [Server thread/INFO]: <KoriBotTest> 20
+[15:46:31] [Server thread/INFO]: <KoriLol12> x:-182 y:72 z:280 p:0
+[15:46:31] [Server thread/INFO]: <KoriBotTest> В путь!
+[15:47:50] [Server thread/INFO]: <KoriLol12> игроки максимум
+[15:47:50] [Server thread/INFO]: <KoriBotTest> 20
+[15:47:53] [Server thread/INFO]: <KoriBotTest> Я на месте!
+[15:48:59] [Server thread/INFO]: <KoriLol12> твое хп
+[15:48:59] [Server thread/INFO]: <KoriBotTest> 19
+[15:49:18] [Server thread/INFO]: KoriBotTest lost connection: Internal Exception: java.net.SocketException: Connection reset
+[15:49:18] [Server thread/INFO]: KoriBotTest left the game
+[16:00:28] [Server thread/INFO]: KoriLol12 was slain by Zombie
