@@ -1,6 +1,7 @@
 const mineflayer = require('mineflayer')
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const { GoalNear } = goals;
+const mineflayerViewer = require('prismarine-viewer').mineflayer
 
 console.log("Запуск Бота")
 
@@ -88,4 +89,7 @@ bot.on('error', (reason) => {
   console.log("Произошла ошибка", reason)
 })
 
-const manjaro = "manjaro hello"
+bot.once('spawn', () => {
+  mineflayerViewer(bot, { port: 3000 })
+  console.log("Запуск Веб Ротации")
+})
