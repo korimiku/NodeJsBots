@@ -27,6 +27,7 @@ bot.loadPlugin(pathfinder);
 
 
 //команды
+const hello = "привет"
 const heal = "твое хп"
 const max_pl = "игроки макс"
 const stop_coord = "не иди"
@@ -45,6 +46,12 @@ rl.on('line', (input) => {
   } else if (command === max_pl) {
    
     console.log(bot.game.maxPlayers);
+
+  } else if (command === hello) {
+   
+    console.log("Привет! вот мои доступные команды:\n1)Твое хп");
+    console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
+    console.log("3)игроки макс");
 
   } else if (coord.test(command)) {
     // Проверяем, соответствует ли команда регулярному выражению координат
@@ -65,9 +72,14 @@ rl.on('line', (input) => {
 });
 
 bot.on('chat', (username, message) => {
+  //логирование чата
+  const chatMessage = `${username}: ${message}`;
+  console.log(chatMessage); // Выводим сообщение в консоль
+  //доступные комамнды
   if (username === bot.username) return
-  if (message.toLowerCase() === "привет" ) {
-    bot.chat("Привет! вот мои доступные команды:\n 1)'Твое хп'\n 2) Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
+  if (message.toLowerCase() === hello ) {
+    bot.chat("Привет! вот мои доступные команды:\n1)Твое хп");
+    bot.chat("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
     bot.chat("3)игроки макс");
   }
 
