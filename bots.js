@@ -1,18 +1,21 @@
 const mineflayer = require('mineflayer')
 const readline = require('readline');
+const mc = require('minecraft-protocol');
 const { stdin: input, stdout: output } = require('node:process');
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const { GoalNear } = goals;
 const mineflayerViewer = require('prismarine-viewer').mineflayer
 
+const host = "localhost"
+const port = "25565"
 console.log("Запуск Бота")
 
 const bot = mineflayer.createBot({
   
-  host: 'localhost', // minecraft server ip
+  host: host, // minecraft server ip
   username: 'Bot', // username to join as if auth is `offline`, else a unique identifier for this account. Switch if you want to change accounts
   auth: 'offline', // for offline mode servers, you can set this to 'offline'
-  port: 25565,
+  port: port,
   version: "1.12.2"
   // port: 25565,              // set if you need a port that isn't 25565
   // version: false,           // only set if you need a specific version or snapshot (ie: "1.8.9" or "1.16.5"), otherwise it's set automatically
@@ -24,8 +27,25 @@ const bot = mineflayer.createBot({
 
 bot.loadPlugin(pathfinder);
 
+mc.ping({ host: host, port: port }, (err, result) => {
+  if (err) {
+    console.error('Ошибка пинга сервера:', err);
+    return;
+  }
+  motdServer = result.description.text
+  versionServer = result.version.name
+  onlinePlayer = result.players.online
+});
+
+
+
+
+
+
+
 
 //команды
+const info = "инфо"
 const serverBrand = "ядро сервера"
 const hello = "привет"
 const heal = "твое хп"
@@ -43,6 +63,14 @@ rl.on('line', (input) => {
    
     console.log(Math.round(bot.health));
 
+  } else if (command.toLowerCase() === info) {
+   
+  console.log('Название сервера:', motdServer);
+  console.log('Версия сервера:', versionServer);
+  console.log('Ядро сервера:', bot.game.serverBrand);
+  console.log('Игроков онлайн:', onlinePlayer);
+  
+
   } else if (command === serverBrand) {
    
     console.log(bot.game.serverBrand);
@@ -57,6 +85,7 @@ rl.on('line', (input) => {
     console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
     console.log("3)игроки макс");
     console.log("4)ядро сервера");
+    console.log("5)инфо");
 
   } else if (coord.test(command)) {
     // Проверяем, соответствует ли команда регулярному выражению координат
@@ -87,12 +116,20 @@ bot.on('chat', (username, message) => {
     bot.chat("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
     bot.chat("3)игроки макс");
     bot.chat("4)ядро сервера");
+    bot.chat("5)инфо");
   }
 
-
+  
 
   if (message.toLowerCase() === heal ) {
     bot.chat(Math.round(bot.health));
+  }
+
+  if (message.toLowerCase() === info ) {
+    bot.chat(`Название сервера: ${motdServer}`);
+    bot.chat(`Версия сервера: ${versionServer}`);
+    bot.chat(`Ядро сервера: ${bot.game.serverBrand}`);
+    bot.chat(`Игроков онлайн: ${onlinePlayer}`);
   }
 
   
@@ -173,7 +210,8 @@ bot.on('error', (reason) => {
   console.log("Произошла ошибка", reason)
 })
 
-bot.once('spawn', () => {
+bot.once('login', () => {
+  console.log("Успешное подключение")
   mineflayerViewer(bot, { port: 3001 })
   console.log("Запуск Веб Ротации")
 })

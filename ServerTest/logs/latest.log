@@ -1,56 +1,105 @@
-[18:39:06] [Server thread/INFO]: Starting minecraft server version 1.12.2
-[18:39:06] [Server thread/INFO]: Loading properties
-[18:39:06] [Server thread/INFO]: Default game type: SURVIVAL
-[18:39:06] [Server thread/INFO]: Generating keypair
-[18:39:06] [Server thread/INFO]: Starting Minecraft server on *:25565
-[18:39:06] [Server thread/INFO]: Using epoll channel type
-[18:39:06] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[18:39:06] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[18:39:06] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[18:39:06] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[18:39:06] [Server thread/INFO]: Preparing level "world"
-[18:39:07] [Server thread/INFO]: Loaded 488 advancements
-[18:39:07] [Server thread/INFO]: Preparing start region for level 0
-[18:39:08] [Server thread/INFO]: Preparing spawn area: 87%
-[18:39:08] [Server thread/INFO]: Done (1,420s)! For help, type "help" or "?"
-[18:39:15] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:45082] logged in with entity id 271 at (-184.5, 78.0, 257.5)
-[18:39:15] [Server thread/INFO]: Bot joined the game
-[18:39:43] [Server thread/INFO]: Bot lost connection: Disconnected
-[18:39:43] [Server thread/INFO]: Bot left the game
-[18:39:44] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:38896] logged in with entity id 311 at (-184.5, 78.0, 257.5)
-[18:39:44] [Server thread/INFO]: Bot joined the game
-[18:39:57] [Server thread/INFO]: Bot lost connection: Disconnected
-[18:39:57] [Server thread/INFO]: Bot left the game
-[18:39:58] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:50528] logged in with entity id 398 at (-184.5, 78.0, 257.5)
-[18:39:58] [Server thread/INFO]: Bot joined the game
-[18:40:06] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
-[18:40:06] [Server thread/INFO]: Bot left the game
-[18:40:23] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:50496] logged in with entity id 618 at (-184.5, 78.0, 257.5)
-[18:40:23] [Server thread/INFO]: Bot joined the game
-[18:41:56] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
-[18:41:56] [Server thread/INFO]: Bot left the game
-[18:41:59] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:46262] logged in with entity id 1224 at (-184.5, 78.0, 257.5)
-[18:41:59] [Server thread/INFO]: Bot joined the game
-[18:42:47] [Server thread/INFO]: Bot was slain by Enderman
-[18:42:47] [Server thread/INFO]: <Bot> Я не смог прийти на координаты :(
-[18:44:38] [Server thread/INFO]: <Bot> Я на месте!
-[18:45:47] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
-[18:45:47] [Server thread/INFO]: Bot left the game
-[18:51:26] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:53378] logged in with entity id 4266 at (98.3741468, 46.41999998688698, 93.50000000000009)
-[18:51:26] [Server thread/INFO]: Bot joined the game
-[18:52:06] [Server thread/INFO]: Bot lost connection: Disconnected
-[18:52:06] [Server thread/INFO]: Bot left the game
-[18:52:58] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:58806] logged in with entity id 4770 at (98.3741468, 46.0, 93.50000000000009)
-[18:52:58] [Server thread/INFO]: Bot joined the game
-[18:53:22] [Server thread/INFO]: KoriWindy[/127.0.0.1:38572] logged in with entity id 5054 at (185.0651444469505, 80.24313565259423, 109.97252642823639)
-[18:53:22] [Server thread/INFO]: KoriWindy joined the game
-[18:53:27] [Server thread/INFO]: <KoriWindy> ядро сервера
-[18:53:27] [Server thread/INFO]: <Bot> vanilla
-[18:53:31] [Server thread/INFO]: <KoriWindy> твое хп
-[18:53:32] [Server thread/INFO]: <Bot> 12
-[18:53:37] [Server thread/INFO]: <KoriWindy> игроки макс
-[18:53:37] [Server thread/INFO]: <Bot> 100
-[18:54:02] [Server thread/INFO]: KoriWindy lost connection: Disconnected
-[18:54:02] [Server thread/INFO]: KoriWindy left the game
-[18:54:05] [Server thread/INFO]: Bot lost connection: Disconnected
-[18:54:05] [Server thread/INFO]: Bot left the game
+[19:15:42] [Server thread/INFO]: Starting minecraft server version 1.12.2
+[19:15:42] [Server thread/INFO]: Loading properties
+[19:15:42] [Server thread/INFO]: Default game type: SURVIVAL
+[19:15:42] [Server thread/INFO]: Generating keypair
+[19:15:42] [Server thread/INFO]: Starting Minecraft server on *:25565
+[19:15:42] [Server thread/INFO]: Using epoll channel type
+[19:15:42] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[19:15:42] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[19:15:42] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[19:15:42] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[19:15:42] [Server thread/INFO]: Preparing level "world"
+[19:15:43] [Server thread/INFO]: Loaded 488 advancements
+[19:15:43] [Server thread/INFO]: Preparing start region for level 0
+[19:15:44] [Server thread/INFO]: Preparing spawn area: 92%
+[19:15:44] [Server thread/INFO]: Done (1,355s)! For help, type "help" or "?"
+[19:25:02] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:43994] logged in with entity id 219 at (98.3741468, 46.0, 93.50000000000009)
+[19:25:02] [Server thread/INFO]: Bot joined the game
+[19:25:19] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[19:25:19] [Server thread/INFO]: Bot left the game
+[19:29:05] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:56092] logged in with entity id 507 at (98.3741468, 46.0, 93.50000000000009)
+[19:29:05] [Server thread/INFO]: Bot joined the game
+[19:30:15] [Server thread/INFO]: Bot lost connection: Disconnected
+[19:30:15] [Server thread/INFO]: Bot left the game
+[19:30:16] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:37898] logged in with entity id 1123 at (98.3741468, 46.0, 93.50000000000009)
+[19:30:16] [Server thread/INFO]: Bot joined the game
+[19:30:47] [Server thread/INFO]: Bot lost connection: Disconnected
+[19:30:47] [Server thread/INFO]: Bot left the game
+[19:31:05] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:51724] logged in with entity id 1583 at (98.3741468, 46.0, 93.50000000000009)
+[19:31:05] [Server thread/INFO]: Bot joined the game
+[19:32:39] [Server thread/INFO]: Bot lost connection: Disconnected
+[19:32:39] [Server thread/INFO]: Bot left the game
+[19:32:40] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:57856] logged in with entity id 2491 at (98.7, 46.0, 93.7)
+[19:32:40] [Server thread/INFO]: Bot joined the game
+[19:32:44] [Server thread/INFO]: Bot was slain by Zombie
+[19:37:26] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[19:37:26] [Server thread/INFO]: Bot left the game
+[19:37:28] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:33566] logged in with entity id 6372 at (-167.5, 77.0, 261.5)
+[19:37:28] [Server thread/INFO]: Bot joined the game
+[19:40:13] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[19:40:13] [Server thread/INFO]: Bot left the game
+[19:40:14] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:51002] logged in with entity id 8557 at (-167.5, 77.0, 261.5)
+[19:40:14] [Server thread/INFO]: Bot joined the game
+[19:40:53] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[19:40:53] [Server thread/INFO]: Bot left the game
+[19:40:54] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:47398] logged in with entity id 8913 at (-167.5, 77.0, 261.5)
+[19:40:54] [Server thread/INFO]: Bot joined the game
+[19:41:51] [Server thread/INFO]: KoriWindy[/127.0.0.1:37422] logged in with entity id 9267 at (330.341152237061, 80.24313565259423, 109.72788968327711)
+[19:41:51] [Server thread/INFO]: KoriWindy joined the game
+[19:41:57] [Server thread/INFO]: [KoriWindy: Set the time to 1000]
+[19:41:58] [Server thread/INFO]: <KoriWindy> инфо
+[19:41:58] [Server thread/INFO]: <Bot> Название сервера:
+[19:41:58] [Server thread/INFO]: <Bot> Версия сервера:
+[19:41:58] [Server thread/INFO]: <Bot> Ядро сервера
+[19:41:58] [Server thread/INFO]: <Bot> Игроков онлайн:
+[19:42:24] [Server thread/INFO]: <KoriWindy> инфо
+[19:42:24] [Server thread/INFO]: <Bot> Название сервера:
+[19:42:24] [Server thread/INFO]: <Bot> Версия сервера:
+[19:42:24] [Server thread/INFO]: <Bot> Ядро сервера
+[19:42:24] [Server thread/INFO]: <Bot> Игроков онлайн:
+[19:42:25] [Server thread/INFO]: <KoriWindy> инфо
+[19:42:25] [Server thread/INFO]: <Bot> Название сервера:
+[19:42:25] [Server thread/INFO]: <Bot> Версия сервера:
+[19:42:25] [Server thread/INFO]: <Bot> Ядро сервера
+[19:42:25] [Server thread/INFO]: <Bot> Игроков онлайн:
+[19:44:44] [Server thread/INFO]: Bot lost connection: Disconnected
+[19:44:44] [Server thread/INFO]: Bot left the game
+[19:44:45] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:50628] logged in with entity id 14582 at (-167.5, 77.0, 261.5)
+[19:44:45] [Server thread/INFO]: Bot joined the game
+[19:44:48] [Server thread/INFO]: <KoriWindy> инфо
+[19:44:48] [Server thread/INFO]: <Bot> Название сервера:
+[19:45:03] [Server thread/INFO]: Bot lost connection: Disconnected
+[19:45:03] [Server thread/INFO]: Bot left the game
+[19:45:04] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:43298] logged in with entity id 15575 at (-167.5, 77.0, 261.5)
+[19:45:04] [Server thread/INFO]: Bot joined the game
+[19:45:06] [Server thread/INFO]: <KoriWindy> инфо
+[19:45:06] [Server thread/INFO]: <Bot> Название сервера: A Minecraft Server
+[19:45:06] [Server thread/INFO]: <Bot> Версия сервера: 1.12.2
+[19:45:06] [Server thread/INFO]: <Bot> Ядро сервера: vanilla
+[19:45:06] [Server thread/INFO]: <Bot> Игроков онлайн: 1
+[19:46:10] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[19:46:10] [Server thread/INFO]: Bot left the game
+[19:46:11] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:45506] logged in with entity id 17663 at (-167.5, 77.0, 261.5)
+[19:46:11] [Server thread/INFO]: Bot joined the game
+[19:46:13] [Server thread/INFO]: <KoriWindy> byaj
+[19:46:15] [Server thread/INFO]: <KoriWindy> инфо
+[19:46:15] [Server thread/INFO]: <Bot> Название сервера: A Minecraft Server
+[19:46:15] [Server thread/INFO]: <Bot> Версия сервера: 1.12.2
+[19:46:15] [Server thread/INFO]: <Bot> Ядро сервера: vanilla
+[19:46:15] [Server thread/INFO]: <Bot> Игроков онлайн: 1
+[19:46:36] [Server thread/INFO]: [KoriWindy: Teleported KoriWindy to Bot]
+[19:47:19] [Server thread/INFO]: <Bot> Я на месте!
+[19:47:55] [Server thread/INFO]: Bot lost connection: Disconnected
+[19:47:55] [Server thread/INFO]: Bot left the game
+[19:47:57] [Server thread/INFO]: KoriWindy lost connection: Disconnected
+[19:47:57] [Server thread/INFO]: KoriWindy left the game
+[19:48:02] [Server thread/INFO]: Stopping server
+[19:48:02] [Server thread/INFO]: Saving players
+[19:48:02] [Server thread/INFO]: Saving worlds
+[19:48:02] [Server thread/INFO]: Saving chunks for level 'world'/overworld
+[19:48:02] [Server thread/INFO]: Saving chunks for level 'world'/the_nether
+[19:48:02] [Server thread/INFO]: Saving chunks for level 'world'/the_end
+[19:48:03] [Server Shutdown Thread/INFO]: Stopping server
+[19:48:03] [Server Shutdown Thread/INFO]: Saving players
+[19:48:03] [Server Shutdown Thread/INFO]: Saving worlds
+[19:48:03] [Server Shutdown Thread/INFO]: Saving chunks for level 'world'/overworld
