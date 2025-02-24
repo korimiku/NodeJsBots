@@ -25,8 +25,8 @@ const bot = mineflayer.createBot({
 bot.loadPlugin(pathfinder);
 
 
-
 //команды
+const serverBrand = "ядро сервера"
 const hello = "привет"
 const heal = "твое хп"
 const max_pl = "игроки макс"
@@ -43,6 +43,10 @@ rl.on('line', (input) => {
    
     console.log(Math.round(bot.health));
 
+  } else if (command === serverBrand) {
+   
+    console.log(bot.game.serverBrand);
+
   } else if (command === max_pl) {
    
     console.log(bot.game.maxPlayers);
@@ -52,6 +56,7 @@ rl.on('line', (input) => {
     console.log("Привет! вот мои доступные команды:\n1)Твое хп");
     console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
     console.log("3)игроки макс");
+    console.log("4)ядро сервера");
 
   } else if (coord.test(command)) {
     // Проверяем, соответствует ли команда регулярному выражению координат
@@ -81,6 +86,7 @@ bot.on('chat', (username, message) => {
     bot.chat("Привет! вот мои доступные команды:\n1)Твое хп");
     bot.chat("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
     bot.chat("3)игроки макс");
+    bot.chat("4)ядро сервера");
   }
 
 
@@ -89,10 +95,15 @@ bot.on('chat', (username, message) => {
     bot.chat(Math.round(bot.health));
   }
 
-
+  
   if (message.toLowerCase() === max_pl ) {
     bot.chat(bot.game.maxPlayers);
   }
+
+  if (message.toLowerCase() === serverBrand ) {
+    bot.chat(bot.game.serverBrand);
+  }
+
 
   const matchcoord = message.match(coord);
 

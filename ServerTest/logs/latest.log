@@ -36,3 +36,21 @@
 [18:44:38] [Server thread/INFO]: <Bot> Я на месте!
 [18:45:47] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
 [18:45:47] [Server thread/INFO]: Bot left the game
+[18:51:26] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:53378] logged in with entity id 4266 at (98.3741468, 46.41999998688698, 93.50000000000009)
+[18:51:26] [Server thread/INFO]: Bot joined the game
+[18:52:06] [Server thread/INFO]: Bot lost connection: Disconnected
+[18:52:06] [Server thread/INFO]: Bot left the game
+[18:52:58] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:58806] logged in with entity id 4770 at (98.3741468, 46.0, 93.50000000000009)
+[18:52:58] [Server thread/INFO]: Bot joined the game
+[18:53:22] [Server thread/INFO]: KoriWindy[/127.0.0.1:38572] logged in with entity id 5054 at (185.0651444469505, 80.24313565259423, 109.97252642823639)
+[18:53:22] [Server thread/INFO]: KoriWindy joined the game
+[18:53:27] [Server thread/INFO]: <KoriWindy> ядро сервера
+[18:53:27] [Server thread/INFO]: <Bot> vanilla
+[18:53:31] [Server thread/INFO]: <KoriWindy> твое хп
+[18:53:32] [Server thread/INFO]: <Bot> 12
+[18:53:37] [Server thread/INFO]: <KoriWindy> игроки макс
+[18:53:37] [Server thread/INFO]: <Bot> 100
+[18:54:02] [Server thread/INFO]: KoriWindy lost connection: Disconnected
+[18:54:02] [Server thread/INFO]: KoriWindy left the game
+[18:54:05] [Server thread/INFO]: Bot lost connection: Disconnected
+[18:54:05] [Server thread/INFO]: Bot left the game
