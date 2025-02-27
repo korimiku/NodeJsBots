@@ -8,7 +8,6 @@ const mineflayerViewer = require('prismarine-viewer').mineflayer
 
 const host = "localhost"
 const port = "25565"
-console.log("Запуск Бота")
 
 const bot = mineflayer.createBot({
   
@@ -53,8 +52,23 @@ const max_pl = "игроки макс"
 const stop_coord = "не иди"
 const coord = /x:(-?\d+) y:(-?\d+) z:(-?\d+) p:(-?\d+)/;
 //test x:100 y:100 z:100 p:0
+
+
+
 //CLI
 const rl = readline.createInterface({ input, output });
+
+
+
+//Возможная логика очистки консоли
+//function clearConsole() {
+//  readline.cursorTo(process.stdout, 0, 0);
+//  readline.clearScreenDown(process.stdout);
+//}
+
+
+console.log("Запуск Бота")
+
 
 rl.on('line', (input) => {
   const command = input.trim().toLowerCase();
