@@ -89,3 +89,7 @@
 [20:24:33] [Server thread/INFO]: [Server] очистка консоли эхььь
 [20:24:37] [Server thread/INFO]: Bot lost connection: Disconnected
 [20:24:37] [Server thread/INFO]: Bot left the game
+[20:25:36] [Server Shutdown Thread/INFO]: Stopping server
+[20:25:36] [Server Shutdown Thread/INFO]: Saving players
+[20:25:36] [Server Shutdown Thread/INFO]: Saving worlds
+[20:25:36] [Server Shutdown Thread/INFO]: Saving chunks for level 'world'/overworld
