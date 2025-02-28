@@ -7,7 +7,12 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "forest_hills": "2025-02-12 15:45:56 +0300"
+      "swampland": "2025-02-28 16:21:21 +0300",
+      "extreme_hills_with_trees": "2025-02-28 16:21:26 +0300",
+      "forest_hills": "2025-02-12 15:45:56 +0300",
+      "plains": "2025-02-28 16:21:30 +0300",
+      "extreme_hills": "2025-02-28 16:20:31 +0300",
+      "river": "2025-02-28 16:21:36 +0300"
     },
     "done": false
   }

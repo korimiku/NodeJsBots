@@ -5,6 +5,7 @@ const { stdin: input, stdout: output } = require('node:process');
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const { GoalNear } = goals;
 const mineflayerViewer = require('prismarine-viewer').mineflayer
+const { default: ora } = require('ora');
 
 const host = "localhost"
 const port = "25565"
@@ -15,7 +16,6 @@ const bot = mineflayer.createBot({
   username: 'Bot', // username to join as if auth is `offline`, else a unique identifier for this account. Switch if you want to change accounts
   auth: 'offline', // for offline mode servers, you can set this to 'offline'
   port: port,
-  version: "1.12.2"
   // port: 25565,              // set if you need a port that isn't 25565
   // version: false,           // only set if you need a specific version or snapshot (ie: "1.8.9" or "1.16.5"), otherwise it's set automatically
   // password: '12345678'      // set if you want to use password-based auth (may be unreliable). If specified, the `username` must be an email
@@ -36,7 +36,12 @@ mc.ping({ host: host, port: port }, (err, result) => {
   onlinePlayer = result.players.online
 });
 
-
+function Info() {
+  console.log('Название сервера:', motdServer);
+  console.log('Версия сервера:', versionServer);
+  console.log('Ядро сервера:', bot.game.serverBrand);
+  console.log('Игроков онлайн:', onlinePlayer);
+}
 
 
 
@@ -65,9 +70,28 @@ const rl = readline.createInterface({ input, output });
 //  readline.cursorTo(process.stdout, 0, 0);
 //  readline.clearScreenDown(process.stdout);
 //}
-
-
+//const spinner = ora('Запуск Бота\n').start();
 console.log("Запуск Бота")
+
+bot.once('spawn', () => {
+  
+  console.log("Успешное подключение");
+  mineflayerViewer(bot, { port: 3002 })
+  console.log("Запуск Веб Ротации")
+  // Очистка консоли через 500 мс после "Успешное подключение"\
+  //spinner.stop();
+  //setTimeout(clearConsole, 1500);
+});
+
+
+//setTimeout(() => {
+//  spinner.succeed('Запуск завершен!'); // Успешное завершение
+//  setTimeout(clearConsole, 1500);
+//}, 3000);
+
+
+
+
 
 
 rl.on('line', (input) => {
@@ -79,11 +103,7 @@ rl.on('line', (input) => {
 
   } else if (command.toLowerCase() === info) {
    
-  console.log('Название сервера:', motdServer);
-  console.log('Версия сервера:', versionServer);
-  console.log('Ядро сервера:', bot.game.serverBrand);
-  console.log('Игроков онлайн:', onlinePlayer);
-  
+    Info();
 
   } else if (command === serverBrand) {
    
@@ -114,10 +134,15 @@ rl.on('line', (input) => {
       const goal = new GoalNear(x, y, z, p);
       bot.pathfinder.setGoal(goal);
     }
+  } else if (command === stop_coord) {
+   
+    bot.pathfinder.stop();
+    console.log("Останавливаюсь!")
   } else {
     console.log('Неизвестная команда');
   }
 });
+
 
 bot.on('chat', (username, message) => {
   //логирование чата
@@ -224,8 +249,4 @@ bot.on('error', (reason) => {
   console.log("Произошла ошибка", reason)
 })
 
-bot.once('login', () => {
-  console.log("Успешное подключение")
-  mineflayerViewer(bot, { port: 3001 })
-  console.log("Запуск Веб Ротации")
-})
+
