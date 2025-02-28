@@ -5,7 +5,6 @@ const { stdin: input, stdout: output } = require('node:process');
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const { GoalNear } = goals;
 const mineflayerViewer = require('prismarine-viewer').mineflayer
-const { default: ora } = require('ora');
 
 const host = "localhost"
 const port = "25565"
@@ -66,29 +65,35 @@ const rl = readline.createInterface({ input, output });
 
 
 //Возможная логика очистки консоли
-//function clearConsole() {
-//  readline.cursorTo(process.stdout, 0, 0);
-//  readline.clearScreenDown(process.stdout);
-//}
-//const spinner = ora('Запуск Бота\n').start();
-console.log("Запуск Бота")
+function clearConsole() {
+  readline.cursorTo(process.stdout, 0, 0);
+  readline.clearScreenDown(process.stdout);
+}
+
+let i = 0;
+const frames = ['-', '\\', '|', '/'];
+const interval = setInterval(() => {
+  process.stdout.write((`\rЗапуск Бота... ${frames[i]}`));
+  i = (i + 1) % frames.length;
+}, 100);
 
 bot.once('spawn', () => {
-  
-  console.log("Успешное подключение");
-  mineflayerViewer(bot, { port: 3002 })
-  console.log("Запуск Веб Ротации")
-  // Очистка консоли через 500 мс после "Успешное подключение"\
-  //spinner.stop();
-  //setTimeout(clearConsole, 1500);
+  console.log("\nУспешное подключение");
+  mineflayerViewer(bot, { port: 3002 });
+  mineflayerViewer(bot, { port: 3003, firstPerson: true });
+  console.log("Запуск Веб Ротации");
+  // Очистка консоли через 500 мс после "Успешное подключение"
 });
 
-
-//setTimeout(() => {
-//  spinner.succeed('Запуск завершен!'); // Успешное завершение
-//  setTimeout(clearConsole, 1500);
-//}, 3000);
-
+setTimeout(() => {
+  clearInterval(interval);
+  console.log('\rЗапуск завершен');
+  clearConsole(); 
+  setTimeout(() => {
+    
+    Info(); 
+  }, 1500);
+}, 1500);
 
 
 
