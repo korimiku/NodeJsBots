@@ -144,7 +144,8 @@ rl.on('line', (input) => {
     bot.pathfinder.stop();
     console.log("Останавливаюсь!")
   } else {
-    console.log('Неизвестная команда');
+    bot.chat(input);
+    //console.log('Неизвестная команда');
   }
 });
 
