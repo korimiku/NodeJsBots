@@ -163,20 +163,30 @@ rl.on('line', (input) => {
    
     console.log(bot.game.maxPlayers);
     console.log("")
-  } else if (coord.test(command)) {
-    // Проверяем, соответствует ли команда регулярному выражению координат
-    const matchcoord = command.match(coord);
-    if (matchcoord) {
-      const x = parseInt(matchcoord[1], 10);
-      const y = parseInt(matchcoord[2], 10);
-      const z = parseInt(matchcoord[3], 10);
-      const p = parseInt(matchcoord[4], 10);
+  } else if (coord.test(command) || /^-?\d+ -?\d+ -?\d+ -?\d+$/.test(command)) {
+    // Обработка координат в формате "x:100 y:10 z:100 p:0" или "100 10 100 0"
+    let x, y, z, p;
 
-      console.log('В путь!');
-      console.log("")
-      const goal = new GoalNear(x, y, z, p);
-      bot.pathfinder.setGoal(goal);
+    if (coord.test(command)) {
+      // Если координаты в формате "x:100 y:10 z:100 p:0"
+      const matchcoord = command.match(coord);
+      x = parseInt(matchcoord[1], 10);
+      y = parseInt(matchcoord[2], 10);
+      z = parseInt(matchcoord[3], 10);
+      p = parseInt(matchcoord[4], 10);
+    } else {
+      // Если координаты в формате "100 10 100 0"
+      const parts = command.split(' ');
+      x = parseInt(parts[0], 10);
+      y = parseInt(parts[1], 10);
+      z = parseInt(parts[2], 10);
+      p = parseInt(parts[3], 10);
     }
+
+    console.log('В путь!');
+    console.log("");
+    const goal = new GoalNear(x, y, z, p);
+    bot.pathfinder.setGoal(goal);
   } else if (command === `!${stop_coord}`) {
    
     bot.pathfinder.stop();
@@ -226,22 +236,35 @@ bot.on('chat', (username, message) => {
   }
 
 
-  const matchcoord = message.match(coord);
+  if (coord.test(message) || /^-?\d+ -?\d+ -?\d+ -?\d+$/.test(message)) {
+    let x, y, z, p;
 
-  if (matchcoord) {
-    // Извлекаем координаты из сообщения
-    const x = parseInt(matchcoord[1], 10);
-    const y = parseInt(matchcoord[2], 10);
-    const z = parseInt(matchcoord[3], 10);
-    const p = parseInt(matchcoord[4], 10);
+    if (coord.test(message)) {
+      // Если координаты в формате "x:100 y:10 z:100 p:0"
+      const matchcoord = message.match(coord);
+      x = parseInt(matchcoord[1], 10);
+      y = parseInt(matchcoord[2], 10);
+      z = parseInt(matchcoord[3], 10);
+      p = parseInt(matchcoord[4], 10);
+    } else {
+      // Если координаты в формате "100 10 100 0" или "-130 79 267 0"
+      const parts = message.split(' ');
+      if (parts.length !== 4) {
+        bot.chat("Неправильный формат координат. Используйте: x:100 y:10 z:100 p:0 или 100 10 100 0");
+        return;
+      }
+      x = parseInt(parts[0], 10);
+      y = parseInt(parts[1], 10);
+      z = parseInt(parts[2], 10);
+      p = parseInt(parts[3], 10);
+    }
 
     bot.chat('В путь!');
-
     const goal = new GoalNear(x, y, z, p);
     bot.pathfinder.setGoal(goal);
   }
 
-  if (message.toLowerCase() === stop_coord ) {
+  if (message.toLowerCase() === stop_coord) {
     bot.pathfinder.stop();
     bot.chat("Останавливаюсь!");
   }
