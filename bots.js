@@ -5,6 +5,9 @@ const { stdin: input, stdout: output } = require('node:process');
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const { GoalNear } = goals;
 const mineflayerViewer = require('prismarine-viewer').mineflayer
+const radarPlugin = require('mineflayer-radar')(mineflayer);
+const express = require('express');
+
 
 const host = "localhost"
 const port = "25565"
@@ -40,6 +43,7 @@ function Info() {
   console.log('Версия сервера:', versionServer);
   console.log('Ядро сервера:', bot.game.serverBrand);
   console.log('Игроков онлайн:', onlinePlayer);
+  
 }
 
 
@@ -77,12 +81,31 @@ const interval = setInterval(() => {
   i = (i + 1) % frames.length;
 }, 100);
 
+const app = express();
+const portapp = "3333"
+const portViewerThirdPerson = "3334";
+const portViewerFirstPerson = "3335";
+
 bot.once('spawn', () => {
   console.log("\nУспешное подключение");
-  mineflayerViewer(bot, { port: 3002 });
-  mineflayerViewer(bot, { port: 3003, firstPerson: true });
-  console.log("Запуск Веб Ротации");
-  // Очистка консоли через 500 мс после "Успешное подключение"
+  app.listen(portapp, () => {
+    console.log(`Веб ротация запущена на http://localhost:${portapp}`);
+    mineflayerViewer(bot, { port: portViewerFirstPerson, firstPerson: true });
+    mineflayerViewer(bot, { port: portViewerThirdPerson, firstPerson: false });
+  });
+
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>Меню радара</h1>
+    <ul>
+      <li><a href="http://localhost:${portViewerFirstPerson}">Вид от первого лица</a></li>
+      <li><a href="http://localhost:${portViewerThirdPerson}">Вид от третьего лица</a></li>
+    </ul>
+  `);
+});
+  //mineflayerViewer(bot, { port: 3002 });
+  //mineflayerViewer(bot, { port: 3003, firstPerson: true });
+  //console.log("Запуск Веб Ротации");
 });
 
 setTimeout(() => {
@@ -91,7 +114,18 @@ setTimeout(() => {
   clearConsole(); 
   setTimeout(() => {
     
+    console.log("");
     Info(); 
+    console.log("");
+    console.log("Доступные команды:");
+    console.log("1)!Твое хп");
+    console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
+    console.log("3)!игроки макс");
+    console.log("4)!ядро сервера");
+    console.log("5)!инфо");
+    console.log("6)!команды");
+    console.log("Для того чтобы написать что-то в чат напишите это в консоль и нажмите enter");
+    console.log("");
   }, 1500);
 }, 1500);
 
@@ -102,30 +136,33 @@ setTimeout(() => {
 rl.on('line', (input) => {
   const command = input.trim().toLowerCase();
 
-  if (command === heal) {
+  if (command === `!${heal}`) {
    
     console.log(Math.round(bot.health));
-
-  } else if (command.toLowerCase() === info) {
+    console.log("")
+  } else if (command.toLowerCase() === `!${info}`) {
    
     Info();
-
-  } else if (command === serverBrand) {
+    console.log("")
+  } else if (command === `!${serverBrand}`) {
    
     console.log(bot.game.serverBrand);
+    console.log("")
+  } else if (command === "!команды") {
+   
+    console.log("Доступные команды:");
+    console.log("1)!Твое хп");
+    console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
+    console.log("3)!игроки макс");
+    console.log("4)!ядро сервера");
+    console.log("5)!инфо");
+    console.log("6)!команды");
+    console.log("")
 
-  } else if (command === max_pl) {
+  } else if (command === `!${max_pl}`) {
    
     console.log(bot.game.maxPlayers);
-
-  } else if (command === hello) {
-   
-    console.log("Привет! вот мои доступные команды:\n1)Твое хп");
-    console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
-    console.log("3)игроки макс");
-    console.log("4)ядро сервера");
-    console.log("5)инфо");
-
+    console.log("")
   } else if (coord.test(command)) {
     // Проверяем, соответствует ли команда регулярному выражению координат
     const matchcoord = command.match(coord);
@@ -136,13 +173,15 @@ rl.on('line', (input) => {
       const p = parseInt(matchcoord[4], 10);
 
       console.log('В путь!');
+      console.log("")
       const goal = new GoalNear(x, y, z, p);
       bot.pathfinder.setGoal(goal);
     }
-  } else if (command === stop_coord) {
+  } else if (command === `!${stop_coord}`) {
    
     bot.pathfinder.stop();
     console.log("Останавливаюсь!")
+    console.log("")
   } else {
     bot.chat(input);
     //console.log('Неизвестная команда');
