@@ -22,12 +22,14 @@ body {
     color:black;
     margin: -5px; 
     padding: 5px;
+    white-space: nowrap;
   }
 
 
 .menu a:hover {
     text-decoration: none;
     color: orange;
+
 }
 
 .container-menu {
