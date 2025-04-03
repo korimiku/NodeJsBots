@@ -7,6 +7,7 @@ const { GoalNear } = goals;
 const mineflayerViewer = require('prismarine-viewer').mineflayer
 const radarPlugin = require('mineflayer-radar')(mineflayer);
 const express = require('express');
+const path = require('path');
 
 
 const host = "localhost"
@@ -82,6 +83,7 @@ const interval = setInterval(() => {
 }, 100);
 
 const app = express();
+app.use(express.static(path.join(__dirname, 'radar')));
 const portapp = "3333"
 const portViewerThirdPerson = "3334";
 const portViewerFirstPerson = "3335";
@@ -94,14 +96,11 @@ bot.once('spawn', () => {
     mineflayerViewer(bot, { port: portViewerThirdPerson, firstPerson: false });
   });
 
+
 app.get('/', (req, res) => {
-  res.send(`
-    <h1>Меню радара</h1>
-    <ul>
-      <li><a href="http://localhost:${portViewerFirstPerson}">Вид от первого лица</a></li>
-      <li><a href="http://localhost:${portViewerThirdPerson}">Вид от третьего лица</a></li>
-    </ul>
-  `);
+  res.send(
+    res.sendFile(path.join(__dirname, 'radar', 'index.html'))
+  );
 });
   //mineflayerViewer(bot, { port: 3002 });
   //mineflayerViewer(bot, { port: 3003, firstPerson: true });
@@ -119,7 +118,7 @@ setTimeout(() => {
     console.log("");
     console.log("Доступные команды:");
     console.log("1)!Твое хп");
-    console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
+    console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: '!Не иди' ");
     console.log("3)!игроки макс");
     console.log("4)!ядро сервера");
     console.log("5)!инфо");
@@ -240,14 +239,13 @@ bot.on('chat', (username, message) => {
     let x, y, z, p;
 
     if (coord.test(message)) {
-      // Если координаты в формате "x:100 y:10 z:100 p:0"
       const matchcoord = message.match(coord);
       x = parseInt(matchcoord[1], 10);
       y = parseInt(matchcoord[2], 10);
       z = parseInt(matchcoord[3], 10);
       p = parseInt(matchcoord[4], 10);
     } else {
-      // Если координаты в формате "100 10 100 0" или "-130 79 267 0"
+
       const parts = message.split(' ');
       if (parts.length !== 4) {
         bot.chat("Неправильный формат координат. Используйте: x:100 y:10 z:100 p:0 или 100 10 100 0");

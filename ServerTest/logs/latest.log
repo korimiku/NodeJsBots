@@ -1,64 +1,15 @@
-[15:02:08] [Server thread/INFO]: Starting minecraft server version 1.12.2
-[15:02:08] [Server thread/INFO]: Loading properties
-[15:02:08] [Server thread/INFO]: Default game type: SURVIVAL
-[15:02:08] [Server thread/INFO]: Generating keypair
-[15:02:08] [Server thread/INFO]: Starting Minecraft server on *:25565
-[15:02:08] [Server thread/INFO]: Using epoll channel type
-[15:02:08] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[15:02:08] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[15:02:08] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[15:02:08] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[15:02:08] [Server thread/INFO]: Preparing level "world"
-[15:02:08] [Server thread/INFO]: Loaded 488 advancements
-[15:02:08] [Server thread/INFO]: Preparing start region for level 0
-[15:02:09] [Server thread/INFO]: Preparing spawn area: 69%
-[15:02:09] [Server thread/INFO]: Done (1,470s)! For help, type "help" or "?"
-[15:02:13] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:52406] logged in with entity id 314 at (-168.3, 76.0, 260.3)
-[15:02:13] [Server thread/INFO]: Bot joined the game
-[15:02:16] [Server thread/INFO]: KoriLol12[/127.0.0.1:36192] logged in with entity id 316 at (-165.67571542633453, 79.0, 260.27912035778854)
-[15:02:16] [Server thread/INFO]: KoriLol12 joined the game
-[15:02:22] [Server thread/INFO]: [KoriLol12: Set the time to 1000]
-[15:02:32] [Server thread/INFO]: <KoriLol12> -130 79 267 0
-[15:02:39] [Server thread/INFO]: <Bot> -130 79 267 0
-[15:03:16] [Server thread/INFO]: <Bot> не иди
-[15:03:31] [Server thread/INFO]: [KoriLol12: Teleported KoriLol12 to Bot]
-[15:03:35] [Server thread/INFO]: <KoriLol12> 130 79 267 0
-[15:03:38] [Server thread/INFO]: <KoriLol12> 130 79 267 0
-[15:05:27] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
-[15:05:27] [Server thread/INFO]: Bot left the game
-[15:05:29] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:43640] logged in with entity id 3568 at (-42.634286940061735, 64.0, 264.8815094247051)
-[15:05:29] [Server thread/INFO]: Bot joined the game
-[15:05:35] [Server thread/INFO]: <Bot> (coord.test(command) || /^-?\d+ -?\d+ -?\d+ -?\d+$/.test(command)
-[15:06:07] [Server thread/INFO]: <Bot> Я на месте!
-[15:08:44] [Server thread/INFO]: Bot lost connection: Disconnected
-[15:08:44] [Server thread/INFO]: Bot left the game
-[15:08:45] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:59806] logged in with entity id 6624 at (-129.5, 79.0, 267.5)
-[15:08:45] [Server thread/INFO]: Bot joined the game
-[15:08:50] [Server thread/INFO]: <KoriLol12> 130 79 267 0
-[15:08:50] [Server thread/INFO]: <Bot> В путь!
-[15:08:55] [Server thread/INFO]: <KoriLol12> 130 79 267 0
-[15:08:55] [Server thread/INFO]: <Bot> В путь!
-[15:08:58] [Server thread/INFO]: Bot was slain by KoriLol12
-[15:09:02] [Server thread/INFO]: <KoriLol12> 130 79 267 0
-[15:09:02] [Server thread/INFO]: <Bot> В путь!
-[15:09:07] [Server thread/INFO]: [KoriLol12: Teleported KoriLol12 to Bot]
-[15:09:33] [Server thread/INFO]: <KoriLol12> -130 79 267 0
-[15:09:33] [Server thread/INFO]: <Bot> В путь!
-[15:09:54] [Server thread/INFO]: <Bot> Я на месте!
-[15:10:47] [Server thread/INFO]: Bot lost connection: Disconnected
-[15:10:47] [Server thread/INFO]: Bot left the game
-[15:10:48] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:41088] logged in with entity id 8730 at (-129.60061653521225, 79.0, 267.49973474298775)
-[15:10:48] [Server thread/INFO]: Bot joined the game
-[15:10:52] [Server thread/INFO]: <KoriLol12> -130 79 267 0
-[15:10:52] [Server thread/INFO]: <Bot> В путь!
-[15:10:52] [Server thread/INFO]: <Bot> Я на месте!
-[15:10:55] [Server thread/INFO]: Bot was slain by KoriLol12
-[15:10:57] [Server thread/INFO]: <KoriLol12> -130 79 267 0
-[15:10:57] [Server thread/INFO]: <Bot> В путь!
-[15:11:03] [Server thread/INFO]: <KoriLol12> не иди
-[15:11:03] [Server thread/INFO]: <Bot> Останавливаюсь!
-[15:11:03] [Server thread/INFO]: <Bot> Останавливаюсь!
-[15:11:15] [Server thread/INFO]: Bot lost connection: Disconnected
-[15:11:15] [Server thread/INFO]: Bot left the game
-[15:11:17] [Server Shutdown Thread/INFO]: Stopping server
-[15:11:17] [Server Shutdown Thread/INFO]: Saving players
+[18:29:13] [Server thread/INFO]: Starting minecraft server version 1.12.2
+[18:29:13] [Server thread/INFO]: Loading properties
+[18:29:13] [Server thread/INFO]: Default game type: SURVIVAL
+[18:29:13] [Server thread/INFO]: Generating keypair
+[18:29:13] [Server thread/INFO]: Starting Minecraft server on *:25565
+[18:29:13] [Server thread/INFO]: Using epoll channel type
+[18:29:13] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[18:29:13] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[18:29:13] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[18:29:13] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[18:29:13] [Server thread/INFO]: Preparing level "world"
+[18:29:14] [Server thread/INFO]: Loaded 488 advancements
+[18:29:14] [Server thread/INFO]: Preparing start region for level 0
+[18:29:15] [Server thread/INFO]: Preparing spawn area: 93%
+[18:29:15] [Server thread/INFO]: Done (1,247s)! For help, type "help" or "?"
