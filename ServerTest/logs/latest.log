@@ -1,42 +1,262 @@
-[19:36:26] [Server thread/INFO]: Starting minecraft server version 1.12.2
-[19:36:26] [Server thread/INFO]: Loading properties
-[19:36:26] [Server thread/INFO]: Default game type: SURVIVAL
-[19:36:26] [Server thread/INFO]: Generating keypair
-[19:36:27] [Server thread/INFO]: Starting Minecraft server on *:25565
-[19:36:27] [Server thread/INFO]: Using epoll channel type
-[19:36:27] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[19:36:27] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[19:36:27] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[19:36:27] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[19:36:27] [Server thread/INFO]: Preparing level "world"
-[19:36:27] [Server thread/INFO]: Loaded 488 advancements
-[19:36:27] [Server thread/INFO]: Preparing start region for level 0
-[19:36:28] [Server thread/INFO]: Preparing spawn area: 94%
-[19:36:28] [Server thread/INFO]: Done (1,258s)! For help, type "help" or "?"
-[19:36:31] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:53964] logged in with entity id 276 at (-165.5, 75.0, 262.5)
-[19:36:31] [Server thread/INFO]: Bot joined the game
-[19:38:31] [Server thread/INFO]: Bot lost connection: Timed out
-[19:38:31] [Server thread/INFO]: Bot left the game
-[19:38:40] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:60304] logged in with entity id 2546 at (-34.114181386457346, 63.41999998688698, 337.492880996986)
-[19:38:40] [Server thread/INFO]: Bot joined the game
-[19:38:40] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
-[19:38:40] [Server thread/INFO]: Bot left the game
-[19:39:40] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:42610] logged in with entity id 2659 at (-34.114181386457346, 63.1863679808445, 337.492880996986)
-[19:39:40] [Server thread/INFO]: Bot joined the game
-[19:40:46] [Server thread/INFO]: Bot lost connection: Disconnected
-[19:40:46] [Server thread/INFO]: Bot left the game
-[19:41:26] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:49960] logged in with entity id 3167 at (-34.114181386457346, 63.0, 337.492880996986)
-[19:41:26] [Server thread/INFO]: Bot joined the game
-[19:44:06] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
-[19:44:06] [Server thread/INFO]: Bot left the game
-[19:44:08] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:36286] logged in with entity id 5628 at (139.53507456505025, 79.0, 361.5)
-[19:44:08] [Server thread/INFO]: Bot joined the game
-[19:44:19] [Server thread/INFO]: Bot lost connection: Disconnected
-[19:44:19] [Server thread/INFO]: Bot left the game
-[19:53:43] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 86562ms behind, skipping 1731 tick(s)
-[19:53:43] [Server Watchdog/FATAL]: A single server tick took 86,56 seconds (should be max 0,05)
-[19:53:43] [Server Shutdown Thread/INFO]: Stopping server
-[19:53:43] [Server Watchdog/FATAL]: Considering it to be crashed, server will forcibly shutdown.
-[19:53:43] [Server Shutdown Thread/INFO]: Saving players
-[19:53:43] [Server Shutdown Thread/INFO]: Saving worlds
-[19:53:43] [Server Shutdown Thread/INFO]: Saving chunks for level 'world'/overworld
+[21:06:35] [Server thread/INFO]: Starting minecraft server version 1.12.2
+[21:06:35] [Server thread/INFO]: Loading properties
+[21:06:35] [Server thread/INFO]: Default game type: SURVIVAL
+[21:06:35] [Server thread/INFO]: Generating keypair
+[21:06:35] [Server thread/INFO]: Starting Minecraft server on *:25565
+[21:06:35] [Server thread/INFO]: Using epoll channel type
+[21:06:35] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[21:06:35] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[21:06:35] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[21:06:35] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[21:06:35] [Server thread/INFO]: Preparing level "world"
+[21:06:35] [Server thread/INFO]: Loaded 488 advancements
+[21:06:35] [Server thread/INFO]: Preparing start region for level 0
+[21:06:36] [Server thread/INFO]: Preparing spawn area: 80%
+[21:06:37] [Server thread/INFO]: Done (1,439s)! For help, type "help" or "?"
+[21:06:39] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:37986] logged in with entity id 193 at (138.3, 79.0, 361.3)
+[21:06:39] [Server thread/INFO]: Bot joined the game
+[21:06:40] [Server thread/INFO]: Bot lost connection: Disconnected
+[21:06:40] [Server thread/INFO]: Bot left the game
+[21:06:54] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:38288] logged in with entity id 493 at (138.3, 79.0, 361.3)
+[21:06:54] [Server thread/INFO]: Bot joined the game
+[21:07:08] [Server thread/INFO]: KoriLol12[/127.0.0.1:53286] logged in with entity id 618 at (139.70250380113538, 79.0, 361.9465269874829)
+[21:07:08] [Server thread/INFO]: KoriLol12 joined the game
+[21:07:13] [Server thread/INFO]: Bot was slain by KoriLol12
+[21:07:15] [Server thread/INFO]: KoriLol12 has made the advancement [Diamonds!]
+[21:07:19] [Server thread/INFO]: [KoriLol12: Teleported KoriLol12 to Bot]
+[21:12:27] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[21:12:27] [Server thread/INFO]: Bot left the game
+[21:12:28] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:42402] logged in with entity id 5998 at (-182.5, 77.0, 263.5)
+[21:12:28] [Server thread/INFO]: Bot joined the game
+[21:13:32] [Server thread/INFO]: Bot lost connection: Disconnected
+[21:13:32] [Server thread/INFO]: Bot left the game
+[21:13:44] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:55336] logged in with entity id 7041 at (-182.5, 77.0, 263.5)
+[21:13:44] [Server thread/INFO]: Bot joined the game
+[21:14:54] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[21:14:54] [Server thread/INFO]: Bot left the game
+[21:14:55] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:40198] logged in with entity id 7984 at (-182.5, 77.0, 263.5)
+[21:14:55] [Server thread/INFO]: Bot joined the game
+[21:19:23] [Server thread/INFO]: Bot was slain by Zombie
+[21:19:50] [Server thread/INFO]: Bot was slain by Spider
+[21:22:04] [Server thread/INFO]: [KoriLol12: Set the time to 1000]
+[21:22:16] [Server thread/INFO]: [KoriLol12: Given [Command Block] * 1 to KoriLol12]
+[21:22:42] [Server thread/INFO]: [KoriLol12: Set the time to 13000]
+[21:23:09] [Server thread/INFO]: [KoriLol12: Set the time to 1000]
+[21:23:42] [Server thread/WARN]: Bot moved wrongly!
+[21:25:22] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[21:25:22] [Server thread/INFO]: Bot left the game
+[21:37:38] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:39344] logged in with entity id 22197 at (-176.24037030100823, 75.0, 274.464566130098)
+[21:37:38] [Server thread/INFO]: Bot joined the game
+[21:37:38] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[21:37:38] [Server thread/INFO]: Bot left the game
+[21:38:21] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:38430] logged in with entity id 22604 at (-176.24037030100823, 75.0, 274.464566130098)
+[21:38:21] [Server thread/INFO]: Bot joined the game
+[21:38:22] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[21:38:22] [Server thread/INFO]: Bot left the game
+[21:39:13] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:43388] logged in with entity id 23014 at (-176.24037030100823, 75.0, 274.464566130098)
+[21:39:13] [Server thread/INFO]: Bot joined the game
+[21:39:23] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[21:39:23] [Server thread/INFO]: Bot left the game
+[21:47:46] [Server thread/INFO]: Archer[/[0:0:0:0:0:0:0:1%0]:46538] logged in with entity id 28019 at (-173.5, 81.0, 269.5)
+[21:47:46] [Server thread/INFO]: Archer joined the game
+[21:47:47] [Server thread/INFO]: <Archer> Ready!
+[21:49:26] [Server thread/INFO]: [KoriLol12: Teleported KoriLol12 to Archer]
+[21:49:29] [Server thread/INFO]: [KoriLol12: Opped Archer]
+[21:49:37] [Server thread/INFO]: Archer lost connection: Disconnected
+[21:49:37] [Server thread/INFO]: Archer left the game
+[21:49:38] [Server thread/INFO]: Archer[/[0:0:0:0:0:0:0:1%0]:43144] logged in with entity id 29544 at (-177.7, 79.0, 267.02016245537874)
+[21:49:38] [Server thread/INFO]: Archer joined the game
+[21:49:39] [Server thread/INFO]: [Archer: Set the time to 1000]
+[21:49:39] [Server thread/INFO]: <Archer> Ready!
+[21:49:50] [Server thread/INFO]: [KoriLol12: Set own game mode to Survival Mode]
+[21:49:58] [Server thread/INFO]: Archer lost connection: Disconnected
+[21:49:58] [Server thread/INFO]: Archer left the game
+[21:49:59] [Server thread/INFO]: Archer[/[0:0:0:0:0:0:0:1%0]:36320] logged in with entity id 29850 at (-178.65579493391542, 75.0, 266.3)
+[21:49:59] [Server thread/INFO]: Archer joined the game
+[21:50:00] [Server thread/INFO]: [Archer: Set the time to 1000]
+[21:50:00] [Server thread/INFO]: <Archer> Ready!
+[21:51:15] [Server thread/INFO]: Archer lost connection: Timed out
+[21:51:15] [Server thread/INFO]: Archer left the game
+[21:51:15] [Server thread/WARN]: handleDisconnection() called twice
+[21:51:46] [Server thread/INFO]: Archer[/[0:0:0:0:0:0:0:1%0]:34540] logged in with entity id 31081 at (-178.65579493391542, 75.0, 266.3)
+[21:51:46] [Server thread/INFO]: Archer joined the game
+[21:51:46] [Server thread/INFO]: [Archer: Set the time to 1000]
+[21:51:46] [Server thread/INFO]: <Archer> Ready!
+[21:52:44] [Server thread/INFO]: Archer lost connection: Disconnected
+[21:52:44] [Server thread/INFO]: Archer left the game
+[21:52:48] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:39324] logged in with entity id 31790 at (-176.24037030100823, 75.0, 274.464566130098)
+[21:52:48] [Server thread/INFO]: Bot joined the game
+[21:52:57] [Server thread/INFO]: [KoriLol12: Set own game mode to Creative Mode]
+[21:55:58] [Server thread/INFO]: Bot lost connection: Disconnected
+[21:55:58] [Server thread/INFO]: Bot left the game
+[21:58:03] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:56722] logged in with entity id 34583 at (-176.24037030100823, 75.0, 274.464566130098)
+[21:58:03] [Server thread/INFO]: Bot joined the game
+[21:58:18] [Server thread/INFO]: <KoriLol12> инфо
+[21:58:18] [Server thread/INFO]: <Bot> Название сервера: A Minecraft Server
+[21:58:18] [Server thread/INFO]: <Bot> Версия сервера: 1.12.2
+[21:58:18] [Server thread/INFO]: <Bot> Ядро сервера: vanilla
+[21:58:18] [Server thread/INFO]: <Bot> Игроков онлайн: 1
+[21:58:18] [Server thread/INFO]: <Bot> Тпс: 0
+[21:58:59] [Server thread/INFO]: Bot lost connection: Disconnected
+[21:58:59] [Server thread/INFO]: Bot left the game
+[21:59:00] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:38120] logged in with entity id 35361 at (-176.59487030100823, 75.0, 275.31244113009797)
+[21:59:00] [Server thread/INFO]: Bot joined the game
+[21:59:06] [Server thread/INFO]: <KoriLol12> инфо
+[21:59:06] [Server thread/INFO]: <Bot> Название сервера: A Minecraft Server
+[21:59:06] [Server thread/INFO]: <Bot> Версия сервера: 1.12.2
+[21:59:06] [Server thread/INFO]: <Bot> Ядро сервера: vanilla
+[21:59:06] [Server thread/INFO]: <Bot> Игроков онлайн: 1
+[22:02:04] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:02:04] [Server thread/INFO]: Bot left the game
+[22:02:06] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:35412] logged in with entity id 37643 at (-176.59487030100823, 75.0, 275.31244113009797)
+[22:02:06] [Server thread/INFO]: Bot joined the game
+[22:02:12] [Server thread/INFO]: [KoriLol12: Set the time to 1000]
+[22:02:13] [Server thread/INFO]: Bot was blown up by Creeper
+[22:02:15] [Server thread/INFO]: <KoriLol12> test
+[22:02:15] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:02:15] [Server thread/INFO]: Bot left the game
+[22:02:27] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:47648] logged in with entity id 38124 at (-173.5, 74.0, 267.5)
+[22:02:27] [Server thread/INFO]: Bot joined the game
+[22:02:29] [Server thread/INFO]: <KoriLol12> test
+[22:02:30] [Server thread/INFO]: <KoriLol12> test
+[22:02:30] [Server thread/INFO]: <KoriLol12> test
+[22:02:31] [Server thread/INFO]: <KoriLol12> test
+[22:02:38] [Server thread/INFO]: [KoriLol12: Teleported KoriLol12 to Bot]
+[22:02:54] [Server thread/INFO]: Bot was slain by KoriLol12
+[22:03:01] [Server thread/INFO]: [KoriLol12: Teleported KoriLol12 to Bot]
+[22:03:03] [Server thread/INFO]: <KoriLol12> test
+[22:04:19] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:04:19] [Server thread/INFO]: Bot left the game
+[22:04:20] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:39952] logged in with entity id 40218 at (-185.5, 73.0, 273.5)
+[22:04:20] [Server thread/INFO]: Bot joined the game
+[22:04:24] [Server thread/INFO]: [KoriLol12: Teleported KoriLol12 to Bot]
+[22:04:30] [Server thread/INFO]: Bot was slain by KoriLol12
+[22:04:32] [Server thread/INFO]: [KoriLol12: Teleported KoriLol12 to Bot]
+[22:04:34] [Server thread/INFO]: <KoriLol12> test
+[22:04:53] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:04:53] [Server thread/INFO]: Bot left the game
+[22:04:54] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:37164] logged in with entity id 40936 at (-170.69484349197484, 74.0, 260.3)
+[22:04:54] [Server thread/INFO]: Bot joined the game
+[22:04:58] [Server thread/INFO]: <KoriLol12> test
+[22:05:17] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:05:17] [Server thread/INFO]: Bot left the game
+[22:05:18] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:51586] logged in with entity id 41378 at (-170.69484349197484, 74.0, 260.3)
+[22:05:18] [Server thread/INFO]: Bot joined the game
+[22:05:22] [Server thread/INFO]: <KoriLol12> test
+[22:05:25] [Server thread/INFO]: <KoriLol12> test
+[22:05:26] [Server thread/INFO]: <KoriLol12> test
+[22:05:26] [Server thread/INFO]: <KoriLol12> test
+[22:06:05] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:06:05] [Server thread/INFO]: Bot left the game
+[22:06:06] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:36242] logged in with entity id 42139 at (-170.69484349197484, 74.0, 260.3)
+[22:06:06] [Server thread/INFO]: Bot joined the game
+[22:06:11] [Server thread/INFO]: <KoriLol12> test
+[22:06:11] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:06:11] [Server thread/INFO]: Bot left the game
+[22:06:38] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:37298] logged in with entity id 42572 at (-170.69484349197484, 74.0, 260.3)
+[22:06:38] [Server thread/INFO]: Bot joined the game
+[22:06:41] [Server thread/INFO]: <KoriLol12> test
+[22:06:43] [Server thread/INFO]: <KoriLol12> test
+[22:06:43] [Server thread/INFO]: <KoriLol12> test
+[22:06:44] [Server thread/INFO]: <KoriLol12> test
+[22:06:55] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:06:55] [Server thread/INFO]: Bot left the game
+[22:06:56] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:59084] logged in with entity id 42991 at (-170.69484349197484, 74.0, 260.3)
+[22:06:56] [Server thread/INFO]: Bot joined the game
+[22:06:58] [Server thread/INFO]: <KoriLol12> test
+[22:06:59] [Server thread/INFO]: <KoriLol12> test
+[22:06:59] [Server thread/INFO]: <KoriLol12> test
+[22:07:00] [Server thread/INFO]: <KoriLol12> test
+[22:08:26] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:08:26] [Server thread/INFO]: Bot left the game
+[22:08:27] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:57546] logged in with entity id 44212 at (-170.69484349197484, 74.0, 260.3)
+[22:08:27] [Server thread/INFO]: Bot joined the game
+[22:08:32] [Server thread/INFO]: <KoriLol12> test
+[22:08:33] [Server thread/INFO]: <KoriLol12> test
+[22:08:33] [Server thread/INFO]: <KoriLol12> test
+[22:08:33] [Server thread/INFO]: <KoriLol12> test
+[22:08:36] [Server thread/INFO]: Bot was slain by KoriLol12
+[22:08:37] [Server thread/INFO]: <KoriLol12> test
+[22:09:10] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:09:10] [Server thread/INFO]: Bot left the game
+[22:09:11] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:60040] logged in with entity id 44764 at (-172.5, 76.0, 258.5)
+[22:09:11] [Server thread/INFO]: Bot joined the game
+[22:09:13] [Server thread/INFO]: <KoriLol12> test
+[22:09:37] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:09:37] [Server thread/INFO]: Bot left the game
+[22:09:38] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:35464] logged in with entity id 45049 at (-172.5, 76.0, 258.5)
+[22:09:38] [Server thread/INFO]: Bot joined the game
+[22:09:41] [Server thread/INFO]: <KoriLol12> test
+[22:09:41] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:09:41] [Server thread/INFO]: Bot left the game
+[22:09:52] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:51282] logged in with entity id 45163 at (-172.5, 76.0, 258.5)
+[22:09:52] [Server thread/INFO]: Bot joined the game
+[22:09:54] [Server thread/INFO]: <KoriLol12> test
+[22:10:22] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:10:22] [Server thread/INFO]: Bot left the game
+[22:10:23] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:58972] logged in with entity id 45789 at (-172.5, 76.0, 258.5)
+[22:10:23] [Server thread/INFO]: Bot joined the game
+[22:10:26] [Server thread/INFO]: <KoriLol12> test
+[22:10:39] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:10:39] [Server thread/INFO]: Bot left the game
+[22:10:40] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:41874] logged in with entity id 45913 at (-172.5, 76.0, 258.5)
+[22:10:40] [Server thread/INFO]: Bot joined the game
+[22:10:42] [Server thread/INFO]: <KoriLol12> test
+[22:11:01] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:11:01] [Server thread/INFO]: Bot left the game
+[22:11:03] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:45164] logged in with entity id 46301 at (-172.5, 76.0, 258.5)
+[22:11:03] [Server thread/INFO]: Bot joined the game
+[22:11:05] [Server thread/INFO]: <KoriLol12> test
+[22:11:15] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:11:15] [Server thread/INFO]: Bot left the game
+[22:11:16] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:60934] logged in with entity id 46463 at (-172.5, 76.0, 258.5)
+[22:11:16] [Server thread/INFO]: Bot joined the game
+[22:11:18] [Server thread/INFO]: <KoriLol12> test
+[22:13:14] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:13:14] [Server thread/INFO]: Bot left the game
+[22:13:15] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:36708] logged in with entity id 48059 at (-172.5, 76.0, 258.5)
+[22:13:15] [Server thread/INFO]: Bot joined the game
+[22:13:23] [Server thread/INFO]: [KoriLol12: Set the time to 1000]
+[22:13:25] [Server thread/INFO]: <KoriLol12> крутись
+[22:13:29] [Server thread/INFO]: Bot was slain by KoriLol12
+[22:13:34] [Server thread/INFO]: Bot lost connection: Internal Exception: io.netty.channel.unix.Errors$NativeIoException: syscall:read(..) failed: Соединение разорвано другой стороной
+[22:13:34] [Server thread/INFO]: Bot left the game
+[22:13:35] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:33474] logged in with entity id 48348 at (-167.5, 78.0, 259.5)
+[22:13:35] [Server thread/INFO]: Bot joined the game
+[22:13:48] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:13:48] [Server thread/INFO]: Bot left the game
+[22:18:00] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:58850] logged in with entity id 51385 at (-167.5, 78.0, 259.5)
+[22:18:00] [Server thread/INFO]: Bot joined the game
+[22:18:06] [Server thread/INFO]: <KoriLol12> крутись
+[22:19:56] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:19:56] [Server thread/INFO]: Bot left the game
+[22:19:57] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:39002] logged in with entity id 53077 at (-167.5, 78.0, 259.5)
+[22:19:57] [Server thread/INFO]: Bot joined the game
+[22:20:00] [Server thread/INFO]: <KoriLol12> крутись
+[22:20:03] [Server thread/INFO]: <KoriLol12> не крутись
+[22:20:05] [Server thread/INFO]: <KoriLol12> не крутись
+[22:20:05] [Server thread/INFO]: <KoriLol12> не крутись
+[22:20:06] [Server thread/INFO]: <KoriLol12> не крутись
+[22:20:09] [Server thread/INFO]: <KoriLol12> !не крутись
+[22:20:12] [Server thread/INFO]: <KoriLol12> Не крутись
+[22:20:39] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:20:39] [Server thread/INFO]: Bot left the game
+[22:20:40] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:59784] logged in with entity id 53702 at (-167.5, 78.0, 259.5)
+[22:20:40] [Server thread/INFO]: Bot joined the game
+[22:20:45] [Server thread/INFO]: <KoriLol12> крутись
+[22:20:47] [Server thread/INFO]: <KoriLol12> не крутись
+[22:20:48] [Server thread/INFO]: <KoriLol12> не крутись
+[22:21:11] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:21:11] [Server thread/INFO]: Bot left the game
+[22:21:12] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:49186] logged in with entity id 54281 at (-167.5, 78.0, 259.5)
+[22:21:12] [Server thread/INFO]: Bot joined the game
+[22:21:15] [Server thread/INFO]: <KoriLol12> крутись
+[22:21:19] [Server thread/INFO]: <KoriLol12> не крутись
+[22:21:41] [Server thread/INFO]: Bot lost connection: Disconnected
+[22:21:41] [Server thread/INFO]: Bot left the game
+[22:21:43] [Server thread/INFO]: Bot[/[0:0:0:0:0:0:0:1%0]:52392] logged in with entity id 54659 at (-167.5, 78.0, 259.5)
+[22:21:43] [Server thread/INFO]: Bot joined the game
+[22:22:04] [Server thread/INFO]: <KoriLol12> крутись
+[22:22:08] [Server thread/INFO]: <KoriLol12> не крутись
+[22:22:19] [Server Shutdown Thread/INFO]: Stopping server
+[22:22:19] [Server Shutdown Thread/INFO]: Saving players

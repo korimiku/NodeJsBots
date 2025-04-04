@@ -27,7 +27,32 @@ const bot = mineflayer.createBot({
 //sudo lsof -i :3001  # Найти процесс, использующий порт 3000
 //kill -9 <PID>       # Заменить <PID> на идентификатор процесса из вывода lsof
 
+
+
+
+
 bot.loadPlugin(pathfinder);
+
+
+let isRotating = false; // Флаг вращения
+let rotationInterval = null; // Интервал для вращения
+
+function toggleRotation(enable) {
+  if (enable && !isRotating) {
+    isRotating = true;
+    let yaw = 0;
+    rotationInterval = setInterval(() => {
+      yaw += 0.05;
+      bot.look(yaw, 0, false);
+    }, 50);
+  } 
+  else if (!enable && isRotating) {
+    clearInterval(rotationInterval); // Останавливаем
+    isRotating = false;
+  }
+}
+
+
 
 mc.ping({ host: host, port: port }, (err, result) => {
   if (err) {
@@ -46,7 +71,6 @@ function Info() {
   console.log('Игроков онлайн:', onlinePlayer);
   
 }
-
 
 
 
@@ -123,12 +147,11 @@ setTimeout(() => {
     console.log("4)!ядро сервера");
     console.log("5)!инфо");
     console.log("6)!команды");
+    console.log("7)!крутись чтобы остановить '!не крутись'")
     console.log("Для того чтобы написать что-то в чат напишите это в консоль и нажмите enter");
     console.log("");
   }, 1500);
 }, 1500);
-
-
 
 
 
@@ -143,6 +166,12 @@ rl.on('line', (input) => {
    
     Info();
     console.log("")
+  } else if (command.toLowerCase() === "!крутись") {
+    toggleRotation(true);
+
+  } else if (command.toLowerCase() === "!не крутись") {
+    toggleRotation(false);
+    
   } else if (command === `!${serverBrand}`) {
    
     console.log(bot.game.serverBrand);
@@ -156,6 +185,7 @@ rl.on('line', (input) => {
     console.log("4)!ядро сервера");
     console.log("5)!инфо");
     console.log("6)!команды");
+    console.log("7)!крутись чтобы остановить '!не крутись'")
     console.log("")
 
   } else if (command === `!${max_pl}`) {
@@ -210,12 +240,19 @@ bot.on('chat', (username, message) => {
     bot.chat("3)игроки макс");
     bot.chat("4)ядро сервера");
     bot.chat("5)инфо");
+    bot.chat("6)крутись чтобы остановить 'не крутись'")
   }
 
-  
 
   if (message.toLowerCase() === heal ) {
     bot.chat(Math.round(bot.health));
+  }
+
+  if (message === 'крутись') {
+    toggleRotation(true); // Запуск
+  } 
+  else if (message === 'не крутись') {
+    toggleRotation(false); // Остановка
   }
 
   if (message.toLowerCase() === info ) {
