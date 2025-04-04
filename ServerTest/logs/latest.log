@@ -33,3 +33,10 @@
 [19:44:08] [Server thread/INFO]: Bot joined the game
 [19:44:19] [Server thread/INFO]: Bot lost connection: Disconnected
 [19:44:19] [Server thread/INFO]: Bot left the game
+[19:53:43] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 86562ms behind, skipping 1731 tick(s)
+[19:53:43] [Server Watchdog/FATAL]: A single server tick took 86,56 seconds (should be max 0,05)
+[19:53:43] [Server Shutdown Thread/INFO]: Stopping server
+[19:53:43] [Server Watchdog/FATAL]: Considering it to be crashed, server will forcibly shutdown.
+[19:53:43] [Server Shutdown Thread/INFO]: Saving players
+[19:53:43] [Server Shutdown Thread/INFO]: Saving worlds
+[19:53:43] [Server Shutdown Thread/INFO]: Saving chunks for level 'world'/overworld
