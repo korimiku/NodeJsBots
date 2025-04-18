@@ -8,10 +8,14 @@ const mineflayerViewer = require('prismarine-viewer').mineflayer
 const radarPlugin = require('mineflayer-radar')(mineflayer);
 const express = require('express');
 const path = require('path');
+const funcs = require('./functions.js');
+
 
 
 const host = "localhost"
 const port = "25565"
+
+module.exports = { host, port };
 
 const bot = mineflayer.createBot({
   
@@ -54,15 +58,6 @@ function toggleRotation(enable) {
 
 
 
-mc.ping({ host: host, port: port }, (err, result) => {
-  if (err) {
-    console.error('Ошибка пинга сервера:', err);
-    return;
-  }
-  motdServer = result.description.text
-  versionServer = result.version.name
-  onlinePlayer = result.players.online
-});
 
 function Info() {
   console.log('Название сервера:', motdServer);
@@ -71,9 +66,6 @@ function Info() {
   console.log('Игроков онлайн:', onlinePlayer);
   
 }
-
-
-
 
 
 //команды
