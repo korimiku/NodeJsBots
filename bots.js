@@ -8,71 +8,44 @@ const mineflayerViewer = require('prismarine-viewer').mineflayer
 const radarPlugin = require('mineflayer-radar')(mineflayer);
 const express = require('express');
 const path = require('path');
-const funcs = require('./functions.js');
-
+const { toggleRotation, commands } = require('./functions.js');
+const { startweb } = require('./webapp.js');
+const bot = require('./botinit'); // Импортируем бота
 
 
 const host = "localhost"
 const port = "25565"
 
-module.exports = { host, port };
 
-const bot = mineflayer.createBot({
+module.exports = {
+  host,
+  port
+};
+
+mc.ping({ host: host, port: port }, (err, result) => {
+  if (err) {
+    console.error('Ошибка пинга сервера:', err);
+    return;
+  }
+  motdServer = result.description.text
+  versionServer = result.version.name
+  onlinePlayer = result.players.online
+});
+
+function Info() {
+  console.log('\nНазвание сервера:', motdServer);
+  console.log('Версия сервера:', versionServer);
+  console.log('Ядро сервера:', bot.game.serverBrand);
+  console.log(`Игроков онлайн: ${onlinePlayer}\n`);
   
-  host: host, // minecraft server ip
-  username: 'Bot', // username to join as if auth is `offline`, else a unique identifier for this account. Switch if you want to change accounts
-  auth: 'offline', // for offline mode servers, you can set this to 'offline'
-  port: port,
-  // port: 25565,              // set if you need a port that isn't 25565
-  // version: false,           // only set if you need a specific version or snapshot (ie: "1.8.9" or "1.16.5"), otherwise it's set automatically
-  // password: '12345678'      // set if you want to use password-based auth (may be unreliable). If specified, the `username` must be an email
-})
-
-//sudo lsof -i :3001  # Найти процесс, использующий порт 3000
-//kill -9 <PID>       # Заменить <PID> на идентификатор процесса из вывода lsof
-
-
-
+}
 
 
 bot.loadPlugin(pathfinder);
 
 
-let isRotating = false; // Флаг вращения
-let rotationInterval = null; // Интервал для вращения
-
-function toggleRotation(enable) {
-  if (enable && !isRotating) {
-    isRotating = true;
-    let yaw = 0;
-    rotationInterval = setInterval(() => {
-      yaw += 0.05;
-      bot.look(yaw, 0, false);
-    }, 50);
-  } 
-  else if (!enable && isRotating) {
-    clearInterval(rotationInterval); // Останавливаем
-    isRotating = false;
-  }
-}
-
-
-
-
-function Info() {
-  console.log('Название сервера:', motdServer);
-  console.log('Версия сервера:', versionServer);
-  console.log('Ядро сервера:', bot.game.serverBrand);
-  console.log('Игроков онлайн:', onlinePlayer);
-  
-}
-
 
 //команды
-const info = "инфо"
-const serverBrand = "ядро сервера"
-const hello = "привет"
-const heal = "твое хп"
 const max_pl = "игроки макс"
 const stop_coord = "не иди"
 const coord = /x:(-?\d+) y:(-?\d+) z:(-?\d+) p:(-?\d+)/;
@@ -91,57 +64,25 @@ function clearConsole() {
   readline.clearScreenDown(process.stdout);
 }
 
-let i = 0;
-const frames = ['-', '\\', '|', '/'];
-const interval = setInterval(() => {
-  process.stdout.write((`\rЗапуск Бота... ${frames[i]}`));
-  i = (i + 1) % frames.length;
-}, 100);
+let interval
+function setup() {
+  let i = 0;
+  const frames = ['-', '\\', '|', '/'];
+  interval = setInterval(() => {
+    process.stdout.write((`\rЗапуск Бота... ${frames[i]}`));
+    i = (i + 1) % frames.length;
+  }, 100);
+}
 
-const app = express();
-app.use(express.static(path.join(__dirname, 'radar')));
-const portapp = "3333"
-const portViewerThirdPerson = "3334";
-const portViewerFirstPerson = "3335";
-
-bot.once('spawn', () => {
-  console.log("\nУспешное подключение");
-  app.listen(portapp, () => {
-    console.log(`Веб ротация запущена на http://localhost:${portapp}`);
-    mineflayerViewer(bot, { port: portViewerFirstPerson, firstPerson: true });
-    mineflayerViewer(bot, { port: portViewerThirdPerson, firstPerson: false });
-  });
-
-
-app.get('/', (req, res) => {
-  res.send(
-    res.sendFile(path.join(__dirname, 'radar', 'index.html'))
-  );
-});
-  //mineflayerViewer(bot, { port: 3002 });
-  //mineflayerViewer(bot, { port: 3003, firstPerson: true });
-  //console.log("Запуск Веб Ротации");
-});
+setup()
+startweb()
 
 setTimeout(() => {
-  clearInterval(interval);
-  console.log('\rЗапуск завершен');
+  clearInterval(interval)
   clearConsole(); 
-  setTimeout(() => {
-    
-    console.log("");
+  setTimeout(() => { 
     Info(); 
-    console.log("");
-    console.log("Доступные команды:");
-    console.log("1)!Твое хп");
-    console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: '!Не иди' ");
-    console.log("3)!игроки макс");
-    console.log("4)!ядро сервера");
-    console.log("5)!инфо");
-    console.log("6)!команды");
-    console.log("7)!крутись чтобы остановить '!не крутись'")
-    console.log("Для того чтобы написать что-то в чат напишите это в консоль и нажмите enter");
-    console.log("");
+    commands()
   }, 1500);
 }, 1500);
 
@@ -150,35 +91,23 @@ setTimeout(() => {
 rl.on('line', (input) => {
   const command = input.trim().toLowerCase();
 
-  if (command === `!${heal}`) {
+  if (command === '!твое хп') {
    
     console.log(Math.round(bot.health));
     console.log("")
-  } else if (command.toLowerCase() === `!${info}`) {
+  } else if (command.toLowerCase() === '!инфо') {
    
     Info();
-    console.log("")
+
   } else if (command.toLowerCase() === "!крутись") {
     toggleRotation(true);
 
   } else if (command.toLowerCase() === "!не крутись") {
     toggleRotation(false);
     
-  } else if (command === `!${serverBrand}`) {
-   
-    console.log(bot.game.serverBrand);
-    console.log("")
   } else if (command === "!команды") {
    
-    console.log("Доступные команды:");
-    console.log("1)!Твое хп");
-    console.log("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
-    console.log("3)!игроки макс");
-    console.log("4)!ядро сервера");
-    console.log("5)!инфо");
-    console.log("6)!команды");
-    console.log("7)!крутись чтобы остановить '!не крутись'")
-    console.log("")
+    commands() 
 
   } else if (command === `!${max_pl}`) {
    
@@ -226,7 +155,7 @@ bot.on('chat', (username, message) => {
   console.log(chatMessage); // Выводим сообщение в консоль
   //доступные комамнды
   if (username === bot.username) return
-  if (message.toLowerCase() === hello ) {
+  if (message.toLowerCase() === "привет" ) {
     bot.chat("Привет! вот мои доступные команды:\n1)Твое хп");
     bot.chat("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
     bot.chat("3)игроки макс");
@@ -236,7 +165,7 @@ bot.on('chat', (username, message) => {
   }
 
 
-  if (message.toLowerCase() === heal ) {
+  if (message.toLowerCase() === "твое хп" ) {
     bot.chat(Math.round(bot.health));
   }
 
@@ -247,7 +176,7 @@ bot.on('chat', (username, message) => {
     toggleRotation(false); // Остановка
   }
 
-  if (message.toLowerCase() === info ) {
+  if (message.toLowerCase() === "инфо" ) {
     bot.chat(`Название сервера: ${motdServer}`);
     bot.chat(`Версия сервера: ${versionServer}`);
     bot.chat(`Ядро сервера: ${bot.game.serverBrand}`);
@@ -259,9 +188,6 @@ bot.on('chat', (username, message) => {
     bot.chat(bot.game.maxPlayers);
   }
 
-  if (message.toLowerCase() === serverBrand ) {
-    bot.chat(bot.game.serverBrand);
-  }
 
 
   if (coord.test(message) || /^-?\d+ -?\d+ -?\d+ -?\d+$/.test(message)) {
