@@ -5,9 +5,27 @@
     },
     "done": true
   },
+  "minecraft:recipes/tools/fishing_rod": {
+    "criteria": {
+      "has_string": "2025-04-19 08:41:27 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/bow": {
+    "criteria": {
+      "has_string": "2025-04-19 08:41:27 +0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/purple_wool": {
     "criteria": {
       "has_white_wool": "2025-03-23 15:04:02 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/string_to_wool": {
+    "criteria": {
+      "has_string": "2025-04-19 08:41:27 +0300"
     },
     "done": true
   },
@@ -56,6 +74,7 @@
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "zombie": "2025-04-04 21:06:15 +0300",
+      "spider": "2025-04-19 08:41:27 +0300",
       "creeper": "2025-04-04 22:03:11 +0300"
     },
     "done": false
@@ -102,9 +121,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_andesite": {
+    "criteria": {
+      "has_stone": "2025-04-19 09:02:52 +0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/white_carpet": {
     "criteria": {
       "has_white_wool": "2025-03-23 15:04:02 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tripwire_hook": {
+    "criteria": {
+      "has_string": "2025-04-19 08:41:27 +0300"
     },
     "done": true
   },
@@ -118,12 +149,15 @@
     "criteria": {
       "forest": "2025-03-23 14:19:54 +0300",
       "swampland": "2025-02-28 16:21:21 +0300",
+      "beaches": "2025-04-19 08:39:00 +0300",
       "extreme_hills_with_trees": "2025-02-28 16:21:26 +0300",
       "forest_hills": "2025-02-12 15:45:56 +0300",
       "plains": "2025-02-28 16:21:30 +0300",
       "taiga": "2025-04-04 21:05:38 +0300",
+      "ocean": "2025-04-19 08:44:33 +0300",
       "extreme_hills": "2025-02-28 16:20:31 +0300",
-      "river": "2025-02-28 16:21:36 +0300"
+      "river": "2025-02-28 16:21:36 +0300",
+      "stone_beach": "2025-04-19 08:36:30 +0300"
     },
     "done": false
   },

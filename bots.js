@@ -8,7 +8,7 @@ const mineflayerViewer = require('prismarine-viewer').mineflayer
 const radarPlugin = require('mineflayer-radar')(mineflayer);
 const express = require('express');
 const path = require('path');
-const { toggleRotation, commands } = require('./functions.js');
+const { toggleRotation, commands, Info, isMoving } = require('./functions.js');
 const { startweb } = require('./webapp.js');
 const bot = require('./botinit'); // Импортируем бота
 
@@ -22,43 +22,21 @@ module.exports = {
   port
 };
 
-mc.ping({ host: host, port: port }, (err, result) => {
-  if (err) {
-    console.error('Ошибка пинга сервера:', err);
-    return;
-  }
-  motdServer = result.description.text
-  versionServer = result.version.name
-  onlinePlayer = result.players.online
-});
-
-function Info() {
-  console.log('\nНазвание сервера:', motdServer);
-  console.log('Версия сервера:', versionServer);
-  console.log('Ядро сервера:', bot.game.serverBrand);
-  console.log(`Игроков онлайн: ${onlinePlayer}\n`);
-  
-}
 
 
+//нужная фигня для координат
 bot.loadPlugin(pathfinder);
-
+const coord = /x:(-?\d+) y:(-?\d+) z:(-?\d+) p:(-?\d+)/;
 
 
 //команды
-const max_pl = "игроки макс"
 const stop_coord = "не иди"
-const coord = /x:(-?\d+) y:(-?\d+) z:(-?\d+) p:(-?\d+)/;
 //test x:100 y:100 z:100 p:0
 
 
 
 //CLI
 const rl = readline.createInterface({ input, output });
-
-
-
-//Возможная логика очистки консоли
 function clearConsole() {
   readline.cursorTo(process.stdout, 0, 0);
   readline.clearScreenDown(process.stdout);
@@ -91,32 +69,15 @@ setTimeout(() => {
 rl.on('line', (input) => {
   const command = input.trim().toLowerCase();
 
-  if (command === '!твое хп') {
-   
-    console.log(Math.round(bot.health));
-    console.log("")
-  } else if (command.toLowerCase() === '!инфо') {
-   
-    Info();
-
-  } else if (command.toLowerCase() === "!крутись") {
-    toggleRotation(true);
-
-  } else if (command.toLowerCase() === "!не крутись") {
-    toggleRotation(false);
-    
-  } else if (command === "!команды") {
-   
-    commands() 
-
-  } else if (command === `!${max_pl}`) {
-   
-    console.log(bot.game.maxPlayers);
-    console.log("")
-  } else if (coord.test(command) || /^-?\d+ -?\d+ -?\d+ -?\d+$/.test(command)) {
+  if (command === '!твое хп') {console.log(Math.round(`${bot.health}\n`));}
+  else if (command.toLowerCase() === "!инфо") {Info()}
+  else if (command.toLowerCase() === "!крутись") {toggleRotation(true);}
+  else if (command.toLowerCase() === "!не крутись") {toggleRotation(false);}
+  else if (command.toLowerCase() === "!команды") {commands();}
+  else if (command.toLowerCase() === "!игроки макс") {console.log(`${bot.game.maxPlayers}\n`);}
+  else if (coord.test(command) || /^-?\d+ -?\d+ -?\d+ -?\d+$/.test(command)) {
     // Обработка координат в формате "x:100 y:10 z:100 p:0" или "100 10 100 0"
     let x, y, z, p;
-
     if (coord.test(command)) {
       // Если координаты в формате "x:100 y:10 z:100 p:0"
       const matchcoord = command.match(coord);
@@ -132,22 +93,23 @@ rl.on('line', (input) => {
       z = parseInt(parts[2], 10);
       p = parseInt(parts[3], 10);
     }
-
-    console.log('В путь!');
-    console.log("");
+    
+    
+    console.log('В путь!\n');
     const goal = new GoalNear(x, y, z, p);
     bot.pathfinder.setGoal(goal);
   } else if (command === `!${stop_coord}`) {
    
     bot.pathfinder.stop();
-    console.log("Останавливаюсь!")
-    console.log("")
+    console.log("Останавливаюсь!\n")
   } else {
     bot.chat(input);
     //console.log('Неизвестная команда');
   }
 });
 
+
+//minecraft
 
 bot.on('chat', (username, message) => {
   //логирование чата
@@ -159,36 +121,19 @@ bot.on('chat', (username, message) => {
     bot.chat("Привет! вот мои доступные команды:\n1)Твое хп");
     bot.chat("2)Укажите координаты в виде x:n y:n z:n p:n, p - погрешность в блоках, и я приду на них! Чтобы остановить меня скажите: 'Не иди' ");
     bot.chat("3)игроки макс");
-    bot.chat("4)ядро сервера");
     bot.chat("5)инфо");
-    bot.chat("6)крутись чтобы остановить 'не крутись'")
+    bot.chat("6)крутись, чтобы остановить 'не крутись'")
   }
-
-
-  if (message.toLowerCase() === "твое хп" ) {
-    bot.chat(Math.round(bot.health));
-  }
-
-  if (message === 'крутись') {
-    toggleRotation(true); // Запуск
-  } 
-  else if (message === 'не крутись') {
-    toggleRotation(false); // Остановка
-  }
-
+  if (message.toLowerCase() === "твое хп" ) {bot.chat(Math.round(bot.health));}
+  if (message === 'крутись') {toggleRotation(true);} 
+  if (message === 'не крутись') {toggleRotation(false);}
+  if (message.toLowerCase() === "игроки макс" ) {bot.chat(bot.game.maxPlayers);}
   if (message.toLowerCase() === "инфо" ) {
     bot.chat(`Название сервера: ${motdServer}`);
     bot.chat(`Версия сервера: ${versionServer}`);
     bot.chat(`Ядро сервера: ${bot.game.serverBrand}`);
     bot.chat(`Игроков онлайн: ${onlinePlayer}`);
   }
-
-  
-  if (message.toLowerCase() === max_pl ) {
-    bot.chat(bot.game.maxPlayers);
-  }
-
-
 
   if (coord.test(message) || /^-?\d+ -?\d+ -?\d+ -?\d+$/.test(message)) {
     let x, y, z, p;
@@ -230,19 +175,9 @@ bot.on('path_update', (result) => {
   }
 });
 
-
-// Обработчик достижения цели
 bot.on('goal_reached', () => {
   bot.chat('Я на месте!');
 });
-
-
-
-
-
-
-
-
 
 
 // Возможная логика авторазации пока сыро
@@ -259,14 +194,7 @@ bot.on('goal_reached', () => {
 // });
 
 
-bot.on('kicked', (reason) => {
-
-  console.log("Бот кикнут", reason);
-});
-
-
-bot.on('error', (reason) => {
-  console.log("Произошла ошибка", reason)
-})
+bot.on('kicked', (reason) => {console.log("Бот кикнут", reason);});
+bot.on('error', (reason) => {console.log("Произошла ошибка", reason)})
 
 

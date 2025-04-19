@@ -1,6 +1,6 @@
 const mc = require('minecraft-protocol');
 const bot = require('./botinit'); // Импортируем бота из отдельного файла
-
+const { host, port } = require('./bots.js');
 
 
 //!крутись
@@ -31,12 +31,33 @@ function commands() {
   console.log("3)!игроки макс");
   console.log("5)!инфо");
   console.log("6)!команды");
-  console.log("7)!крутись чтобы остановить '!не крутись'")
+  console.log("7)!крутись, чтобы остановить '!не крутись'")
   console.log("Для того чтобы написать что-то в чат напишите это в консоль и нажмите enter\n");
 }
 
 
+mc.ping({ host: host, port: port }, (err, result) => {
+  if (err) {
+    console.error('Ошибка пинга сервера:', err);
+    return;
+  }
+  motdServer = result.description.text
+  versionServer = result.version.name
+  onlinePlayer = result.players.online
+});
+
+function Info() {
+  console.log('\nНазвание сервера:', motdServer);
+  console.log('Версия сервера:', versionServer);
+  console.log('Ядро сервера:', bot.game.serverBrand);
+  console.log(`Игроков онлайн: ${onlinePlayer}\n`);
+  
+}
+
+
+
 module.exports = {
   toggleRotation,
-  commands
+  commands,
+  Info
 };
